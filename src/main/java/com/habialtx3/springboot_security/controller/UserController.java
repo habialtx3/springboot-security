@@ -20,7 +20,6 @@ public class UserController {
 
     @PostMapping("/login")
     public String login(@RequestBody User user) {
-        System.out.println(user);
-        return "Success";
+        return userService.verify(user);
     }
 }
